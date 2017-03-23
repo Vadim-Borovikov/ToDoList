@@ -3,7 +3,7 @@ using ToDoList.Data.Tags;
 
 namespace ToDoList.Data
 {
-    public class DbContext : System.Data.Entity.DbContext
+    public class ApplicationDbContext : DbContext
     {
         public DbSet<Task> Tasks { get; set; }
         public DbSet<Context> Contexts { get; set; }

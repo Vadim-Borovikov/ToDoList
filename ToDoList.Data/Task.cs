@@ -19,7 +19,9 @@ namespace ToDoList.Data
 
         public Status Status { get; set; } = Status.Inbox;
 
-        public List<Tag> Tags { get; set; }
-        public List<Task> Subtasks { get; set; }
+        public virtual List<Tag> Tags { get; set; } = new List<Tag>();
+
+        public Task Parent { get; set; }
+        public virtual List<Task> Subtasks { get; set; } = new List<Task>();
     }
 }

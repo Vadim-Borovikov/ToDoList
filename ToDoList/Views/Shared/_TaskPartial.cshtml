@@ -1,0 +1,8 @@
+﻿@using ToDoList.Models
+@model TaskInfo
+
+@Html.DisplayFor(modelItem => Model.Task.Summary)
+@if (Model.SubtaskAmount > 0)
+{
+    <text>(+@Model.SubtaskAmount)</text>
+}

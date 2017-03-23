@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using ToDoList.BusinessLogic;
 
 namespace ToDoList.Controllers
 {
@@ -10,7 +7,7 @@ namespace ToDoList.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return View(DataManager.GetSubtasks());
         }
 
         public ActionResult About()
